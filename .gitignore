@@ -1,0 +1,9 @@
+.aws/
+*.pem
+*.key
+*.csv
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+fake_credentials.json
