@@ -14,7 +14,7 @@ resource "aws_security_group" "bad_sg" {
   description = "Intentionally misconfigured for security lab"
  
   ingress {
-    description = "SSH open to internet — INTENTIONAL LAB MISCONFIG"
+    description = "SSH open to internet - INTENTIONAL LAB MISCONFIG"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
@@ -33,7 +33,7 @@ resource "aws_security_group" "bad_sg" {
  
 resource "aws_instance" "lab_server" {
   ami                    = data.aws_ami.amazon_linux.id
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   iam_instance_profile   = aws_iam_instance_profile.lab_profile.name
   vpc_security_group_ids = [aws_security_group.bad_sg.id]
  
