@@ -1,0 +1,106 @@
+=================================================================
+ CLOUDTRAIL THREAT HUNT — Cloud Security Lab
+ Time: 2026-04-04 08:58:35 UTC
+=================================================================
+
+[HUNT 1] Scanning for IAM privilege escalation...
+  [CRITICAL] IAM Policy Attached
+          Actor:   arn:aws:iam::471623014894:user/cloud-sec-lab-user
+          Policy:  arn:aws:iam::aws:policy/AdministratorAccess
+          Time:    2026-04-04 10:09:50 UTC
+          ATT&CK:  T1078 - Valid Accounts / TA0004 Privilege Escalation
+  [CRITICAL] IAM Policy Attached
+          Actor:   arn:aws:iam::471623014894:user/cloud-sec-lab-user
+          Policy:  arn:aws:iam::aws:policy/AdministratorAccess
+          Time:    2026-04-04 02:45:04 UTC
+          ATT&CK:  T1078 - Valid Accounts / TA0004 Privilege Escalation
+
+[HUNT 2] Scanning for S3 public access changes...
+  [HIGH] S3 Public Access Block Modified
+          Actor:   arn:aws:iam::471623014894:user/cloud-sec-lab-user
+          Bucket:  aws-cloud-security-lab-dhanuka-2026
+          Time:    2026-04-04 10:09:48 UTC
+          ATT&CK:  T1530 - Data from Cloud Storage Object
+  [HIGH] S3 Public Access Block Modified
+          Actor:   arn:aws:iam::471623014894:user/cloud-sec-lab-user
+          Bucket:  aws-cloud-security-lab-dhanuka-2026
+          Time:    2026-04-04 02:45:09 UTC
+          ATT&CK:  T1530 - Data from Cloud Storage Object
+
+[HUNT 3] Scanning for security group rule changes...
+  [HIGH] Security Group: Unrestricted Inbound Rule Added
+          Actor:    arn:aws:iam::471623014894:user/cloud-sec-lab-user
+          Protocol: TCP Port 22
+          CIDR:     0.0.0.0/0 (entire internet)
+          Time:     2026-04-04 10:09:54 UTC
+          ATT&CK:   T1133 - External Remote Services
+  [HIGH] Security Group: Unrestricted Inbound Rule Added
+          Actor:    arn:aws:iam::471623014894:user/cloud-sec-lab-user
+          Protocol: TCP Port 22
+          CIDR:     0.0.0.0/0 (entire internet)
+          Time:     2026-04-04 02:45:08 UTC
+          ATT&CK:   T1133 - External Remote Services
+
+[HUNT 4] Checking for root account usage (always suspicious)...
+  [CRITICAL] Root account used 50 time(s) in 24 hours!
+             Action: ListManagedNotificationEvents at 2026-04-04 02:16:41+05:30
+             Action: GetLoginProfile at 2026-04-04 02:15:54+05:30
+             Action: ListUsers at 2026-04-04 02:15:54+05:30
+             Action: GetUser at 2026-04-04 02:15:54+05:30
+             Action: CreateLoginProfile at 2026-04-04 02:15:53+05:30
+             Action: ListPolicies at 2026-04-04 02:15:03+05:30
+             Action: ListSAMLProviders at 2026-04-04 02:15:01+05:30
+             Action: ListPolicies at 2026-04-04 02:15:01+05:30
+             Action: ListRoles at 2026-04-04 02:15:01+05:30
+             Action: ListGroups at 2026-04-04 02:15:01+05:30
+             Action: ListOpenIDConnectProviders at 2026-04-04 02:15:01+05:30
+             Action: GetAccountPasswordPolicy at 2026-04-04 02:14:41+05:30
+             Action: ListAccessKeys at 2026-04-04 02:14:09+05:30
+             Action: ListServiceSpecificCredentials at 2026-04-04 02:14:09+05:30
+             Action: ListSSHPublicKeys at 2026-04-04 02:14:09+05:30
+             Action: GetAccessKeyLastUsed at 2026-04-04 02:14:09+05:30
+             Action: ListSigningCertificates at 2026-04-04 02:14:09+05:30
+             Action: ListPolicies at 2026-04-04 02:13:11+05:30
+             Action: ListPolicyGenerations at 2026-04-04 02:13:10+05:30
+             Action: DescribeOrganization at 2026-04-04 02:13:10+05:30
+             Action: GetAccessKeyLastUsed at 2026-04-04 02:13:10+05:30
+             Action: ListMFADevices at 2026-04-04 02:13:09+05:30
+             Action: ListGroupsForUser at 2026-04-04 02:13:09+05:30
+             Action: ListPolicies at 2026-04-04 02:13:09+05:30
+             Action: DescribeOrganization at 2026-04-04 02:13:09+05:30
+             Action: DescribeRegisteredRegions at 2026-04-04 02:13:09+05:30
+             Action: ListAccessKeys at 2026-04-04 02:13:09+05:30
+             Action: GetAccessKeyLastUsed at 2026-04-04 02:13:09+05:30
+             Action: ListUserTags at 2026-04-04 02:13:09+05:30
+             Action: ListAttachedUserPolicies at 2026-04-04 02:13:09+05:30
+             Action: ListUserPolicies at 2026-04-04 02:13:09+05:30
+             Action: GetUser at 2026-04-04 02:13:09+05:30
+             Action: GetAccessKeyLastUsed at 2026-04-04 02:12:43+05:30
+             Action: DescribeRegisteredRegions at 2026-04-04 02:12:42+05:30
+             Action: ListGroupsForUser at 2026-04-04 02:12:42+05:30
+             Action: DescribeOrganization at 2026-04-04 02:12:42+05:30
+             Action: GetLoginProfile at 2026-04-04 02:12:42+05:30
+             Action: ListAccessKeys at 2026-04-04 02:12:42+05:30
+             Action: GetAccountPlanState at 2026-04-04 02:12:42+05:30
+             Action: ListSigningCertificates at 2026-04-04 02:12:42+05:30
+             Action: ListMFADevices at 2026-04-04 02:12:42+05:30
+             Action: ListNotificationHubs at 2026-04-04 02:12:42+05:30
+             Action: DescribeOrganization at 2026-04-04 02:12:42+05:30
+             Action: ListUsers at 2026-04-04 02:12:42+05:30
+             Action: ListManagedNotificationEvents at 2026-04-04 02:12:41+05:30
+             Action: GetAccountColor at 2026-04-04 02:12:41+05:30
+             Action: DescribeOrganization at 2026-04-04 02:12:41+05:30
+             Action: DescribeOrganization at 2026-04-04 02:12:40+05:30
+             Action: ListMFADevices at 2026-04-04 02:12:40+05:30
+             Action: DescribeRegisteredRegions at 2026-04-04 02:12:40+05:30
+
+=================================================================
+ HUNT COMPLETE — 7 finding(s) detected
+=================================================================
+  [CRITICAL] IAM_PRIVILEGE_ESCALATION — ATT&CK: T1078
+  [CRITICAL] IAM_PRIVILEGE_ESCALATION — ATT&CK: T1078
+  [HIGH] S3_PUBLIC_ACCESS_CHANGE — ATT&CK: T1530
+  [HIGH] S3_PUBLIC_ACCESS_CHANGE — ATT&CK: T1530
+  [HIGH] OPEN_SECURITY_GROUP — ATT&CK: T1133
+  [HIGH] OPEN_SECURITY_GROUP — ATT&CK: T1133
+  [CRITICAL] ROOT_ACCOUNT_USAGE — ATT&CK: T1078.004

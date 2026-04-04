@@ -1,7 +1,6 @@
 .aws/
 *.pem
 *.key
-*.csv
 terraform.tfstate
 terraform.tfstate.backup
 .terraform/
