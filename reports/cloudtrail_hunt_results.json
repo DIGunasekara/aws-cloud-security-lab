@@ -1,0 +1,65 @@
+{
+  "hunt_timestamp": "2026-04-04T09:17:54.287239",
+  "total_findings": 7,
+  "findings": [
+    {
+      "severity": "CRITICAL",
+      "type": "IAM_PRIVILEGE_ESCALATION",
+      "actor": "arn:aws:iam::471623014894:user/cloud-sec-lab-user",
+      "resource": "arn:aws:iam::aws:policy/AdministratorAccess",
+      "time": "2026-04-04 10:09:50",
+      "mitre": "T1078",
+      "tactic": "TA0004"
+    },
+    {
+      "severity": "CRITICAL",
+      "type": "IAM_PRIVILEGE_ESCALATION",
+      "actor": "arn:aws:iam::471623014894:user/cloud-sec-lab-user",
+      "resource": "arn:aws:iam::aws:policy/AdministratorAccess",
+      "time": "2026-04-04 02:45:04",
+      "mitre": "T1078",
+      "tactic": "TA0004"
+    },
+    {
+      "severity": "HIGH",
+      "type": "S3_PUBLIC_ACCESS_CHANGE",
+      "actor": "arn:aws:iam::471623014894:user/cloud-sec-lab-user",
+      "resource": "aws-cloud-security-lab-dhanuka-2026",
+      "time": "2026-04-04 10:09:48",
+      "mitre": "T1530",
+      "tactic": "TA0009"
+    },
+    {
+      "severity": "HIGH",
+      "type": "S3_PUBLIC_ACCESS_CHANGE",
+      "actor": "arn:aws:iam::471623014894:user/cloud-sec-lab-user",
+      "resource": "aws-cloud-security-lab-dhanuka-2026",
+      "time": "2026-04-04 02:45:09",
+      "mitre": "T1530",
+      "tactic": "TA0009"
+    },
+    {
+      "severity": "HIGH",
+      "type": "OPEN_SECURITY_GROUP",
+      "actor": "arn:aws:iam::471623014894:user/cloud-sec-lab-user",
+      "resource": "0.0.0.0/0",
+      "time": "2026-04-04 10:09:54",
+      "mitre": "T1133",
+      "tactic": "TA0001"
+    },
+    {
+      "severity": "HIGH",
+      "type": "OPEN_SECURITY_GROUP",
+      "actor": "arn:aws:iam::471623014894:user/cloud-sec-lab-user",
+      "resource": "0.0.0.0/0",
+      "time": "2026-04-04 02:45:08",
+      "mitre": "T1133",
+      "tactic": "TA0001"
+    },
+    {
+      "severity": "CRITICAL",
+      "type": "ROOT_ACCOUNT_USAGE",
+      "mitre": "T1078.004"
+    }
+  ]
+}

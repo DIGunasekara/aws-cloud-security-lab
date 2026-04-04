@@ -1,6 +1,6 @@
 =================================================================
  CLOUDTRAIL THREAT HUNT — Cloud Security Lab
- Time: 2026-04-04 08:58:35 UTC
+ Time: 2026-04-04 09:17:50 UTC
 =================================================================
 
 [HUNT 1] Scanning for IAM privilege escalation...
@@ -104,3 +104,5 @@
   [HIGH] OPEN_SECURITY_GROUP — ATT&CK: T1133
   [HIGH] OPEN_SECURITY_GROUP — ATT&CK: T1133
   [CRITICAL] ROOT_ACCOUNT_USAGE — ATT&CK: T1078.004
+
+Results saved to reports/cloudtrail_hunt_results.json
