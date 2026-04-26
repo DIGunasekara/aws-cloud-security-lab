@@ -85,5 +85,5 @@ cd terraform && terraform destroy
 - [Prowler HTML Report](reports/prowler-output.html)
  
 ---
-*Built by Dhanuka Gunasekara — Network & Cybersecurity undergraduate,
+*Built by Dhanuka Gunasekara — BICT undergraduate special in Network Technology,
 University of Sri Jayewardenepura*
