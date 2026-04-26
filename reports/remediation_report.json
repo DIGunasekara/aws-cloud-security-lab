@@ -12,9 +12,11 @@
     },
     {
       "finding": "IAM Overprivilege",
-      "status": "ERROR",
-      "error": "An error occurred (NoSuchEntity) when calling the DetachRolePolicy operation: Policy arn:aws:iam::aws:policy/AdministratorAccess was not found."
-    },
+      "status": "REMEDIATED",
+      "resource": "lab-ec2-role",
+      "mitre": "T1078",
+      "cis": "CIS 1.16"
+     },
     {
       "finding": "Unrestricted SSH",
       "status": "REMEDIATED",
