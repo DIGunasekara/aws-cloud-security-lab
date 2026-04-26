@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-04-26T16:42:59.363754",
+  "analyst": "Dhanuka Gunasekara",
+  "tool": "boto3 auto-remediation",
+  "results": [
+    {
+      "finding": "S3 Public Access",
+      "status": "REMEDIATED",
+      "resource": "aws-cloud-security-lab-dhanuka-2026",
+      "mitre": "T1530",
+      "cis": "CIS 2.1.5"
+    },
+    {
+      "finding": "IAM Overprivilege",
+      "status": "ERROR",
+      "error": "An error occurred (NoSuchEntity) when calling the DetachRolePolicy operation: Policy arn:aws:iam::aws:policy/AdministratorAccess was not found."
+    },
+    {
+      "finding": "Unrestricted SSH",
+      "status": "REMEDIATED",
+      "resource": "sg-080c3121c01f7de99",
+      "mitre": "T1133",
+      "cis": "CIS 5.2"
+    }
+  ]
+}

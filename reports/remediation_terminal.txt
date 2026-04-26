@@ -1,0 +1,33 @@
+C:\Users\Hp\aws-cloud-security-lab\scripts\auto_remediate.py:17: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().isoformat()
+=================================================================
+ AUTOMATED CLOUD REMEDIATION SCRIPT
+ Started: 2026-04-26T16:42:59.363754
+=================================================================
+
+[FIX 1] Blocking public access on S3 bucket...
+  Target bucket: aws-cloud-security-lab-dhanuka-2026
+  BEFORE: BlockPublicAcls=True (should be True)
+  AFTER:  BlockPublicAcls=True (fixed!)
+  STATUS: REMEDIATED
+
+[FIX 2] Removing overprivileged IAM policy...
+  Target role: lab-ec2-role
+  Removed: AdministratorAccess (all permissions)
+  Attached: AmazonS3ReadOnlyAccess (minimum required)
+  STATUS: REMEDIATED — least privilege applied
+
+[FIX 3] Revoking unrestricted SSH access...
+  Target security group: sg-080c3121c01f7de99
+  Removed: TCP 22 from 0.0.0.0/0 (entire internet)
+  STATUS: REMEDIATED   port 22 no longer exposed
+
+=================================================================
+ REMEDIATION COMPLETE
+=================================================================
+ 2/3 findings remediated
+  [FIXED] S3 Public Access   MITRE T1530   CIS CIS 2.1.5
+  [ERROR] IAM Overprivilege   MITRE N/A   CIS N/A
+  [FIXED] Unrestricted SSH   MITRE T1133   CIS CIS 5.2
+
+Report saved to reports/remediation_report.json
