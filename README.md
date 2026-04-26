@@ -1,5 +1,3 @@
-# File: README.md — replace the placeholder you created in Phase 1
- 
 # Cloud Misconfiguration Detection & Response Lab
  
 ![AWS](https://img.shields.io/badge/AWS-Free_Tier-FF9900?logo=amazonaws)
